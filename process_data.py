@@ -32,13 +32,14 @@ def main(drop_duplicates=True):
     data_files = os.listdir(file_location)
     for target in data_files:
         target = target[:-4]
-        data = pd.read_csv('data/ael_shear_modulus_vrh.csv')
+        data = pd.read_csv(f'data/{target}.csv')
         data.columns = ['cif_file', 'target']
         formula = data['cif_file'].str.split('_ICSD_').str[0]
         data.insert(1, 'formula', formula)
         if drop_duplicates:
             data = data.drop_duplicates('formula')
+        if len(data) < 1000:
+            continue
         train_val_test_split(data, target)
-
 
 main()

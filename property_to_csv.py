@@ -47,7 +47,7 @@ def main():
                'agl_thermal_expansion_300K',
                'agl_thermal_conductivity_300K',
                'Egap',
-               'energy_atom']
+               'energy_atom'] # and so on
 
     get_csv(targets)
 

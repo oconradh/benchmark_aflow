@@ -1,11 +1,8 @@
 import requests
 import os
 from bs4 import BeautifulSoup
-
 import pandas as pd
 import json
-
-# %%
 
 
 def request_icsd_property(prop, icsd=True):
@@ -45,6 +42,7 @@ def list_aflow_urls(icsd=True):
 
 
 def download_cif_files(icsd=True):
+    os.mkdir('cif_files')
     aflow_api_urls, aflow_entries = list_aflow_urls(icsd)
     for url, entry in zip(aflow_api_urls, aflow_entries):
         cif_url = 'http://' + url + '/' + entry + '.cif'
@@ -53,6 +51,7 @@ def download_cif_files(icsd=True):
 
 
 def download_property_files(icsd=True):
+    os.mkdir('property_files')
     property_files = os.listdir('property_files')
     aflow_api_urls, aflow_entries = list_aflow_urls(icsd)
     for url, entry in zip(aflow_api_urls, aflow_entries):
@@ -69,7 +68,7 @@ def download_property_files(icsd=True):
 
 
 # get aflow cif files from the icsd
-download_cif_files(icsd=True)
+# download_cif_files(icsd=True)
 
 # get aflow property files from the icsd
 download_property_files(icsd=True)
