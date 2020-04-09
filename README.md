@@ -9,7 +9,6 @@ The code and downloadable data sets for this project are provided "as-is" under 
 ### Contents
 ##### get_aflow_data.py
 Functions for downloading compound property and crystal structure data via the AFLOW API
-
 Property values are encoded as JSON files, and structure data as crystallographic information files (CIFs)
 
 ##### process_data.py
