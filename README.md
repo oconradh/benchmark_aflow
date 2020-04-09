@@ -8,14 +8,13 @@ The code and downloadable data sets for this project are provided "as-is" under 
 
 ### Contents
 ##### get_aflow_data.py
-Functions for downloading compound property and crystal structure data via the AFLOW API
-Property values are encoded as JSON files, and structure data as crystallographic information files (CIFs)
+Functions for downloading compound property and crystal structure data via the AFLOW API. Property values are encoded as JSON files, and structure data as crystallographic information files (CIFs).
 
 ##### process_data.py
-A script to split property CSV files into separate training, validation, and testing data sets
+A script to split property CSV files into separate training, validation, and testing data sets.
 
 ##### property_to_csv.py
-A script for iterating over each compound, collecting data values by property, and grouping them into CSV files
+A script for iterating over each compound, collecting data values by property, and grouping them into CSV files.
 
 ##### valid_targets.csv
-A single column CSV listing the queriable material properties
+A single column CSV listing the queriable material properties.
