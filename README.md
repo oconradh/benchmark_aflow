@@ -17,4 +17,4 @@ A script to split property CSV files into separate training, validation, and tes
 A script for iterating over each compound, collecting data values by property, and grouping them into CSV files.
 
 ##### valid_targets.csv
-A single column CSV listing the queriable material properties.
+A single column CSV listing the queriable material properties. 
