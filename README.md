@@ -1,5 +1,5 @@
 ## Benchmark Aflow Data Sets for Machine Learning
-This repository contains the code supplement to *Benchmark AFLOW Data Sets for Machine Learning* by CL Clement, SK Kauwe, and TD Sparks, to be published in Integrating Materials and Manufacturing Innovation. 
+This repository contains the code supplement to *Benchmark AFLOW Data Sets for Machine Learning* by CL Clement, SK Kauwe, and TD Sparks, published in 27 May 2020 in Integrating Materials and Manufacturing Innovation. 
 
 The data sets can be downloaded together as a ZIP file at https://doi.org/10.6084/m9.figshare.11954742
 
