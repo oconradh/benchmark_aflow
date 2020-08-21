@@ -7,16 +7,23 @@ import tqdm
 def get_csv(targets):
     file_location = 'property_files/'
     json_files = os.listdir(file_location)
+
     keys = set()
     # data_dict tracks if the json file has that target value as a key
     data_dict = {}
     for target in targets:
         data_dict[target] = {}
-    # this loop reads each json, gets all possible 'keys',
-    # and updates data_dict
+
+    # this loop reads each json, gets all possible 'keys', and updates data_dict
     for json_data in tqdm.tqdm(json_files):
         with open(file_location + json_data) as json_file:
-            data = json.load(json_file)
+            try:
+                data = json.load(json_file)
+            except json.decoder.JSONDecodeError:
+                continue
+            except UnicodeDecodeError:
+                continue
+
             for key in data.keys():
                 keys.add(key)
         for target in targets:
@@ -41,15 +48,15 @@ def get_csv(targets):
 
 def main():
     # here you can put in the target value you want to get properties for
-    targets = ['ael_shear_modulus_vrh',
+    targets = ['Egap',
+               'ael_shear_modulus_vrh',
                'ael_bulk_modulus_vrh',
                'ael_debye_temperature',
                'agl_thermal_expansion_300K',
-               'agl_thermal_conductivity_300K',
-               'Egap',
-               'energy_atom'] # and so on
+               'agl_thermal_conductivity_300K']
 
     get_csv(targets)
 
 
 main()
+
