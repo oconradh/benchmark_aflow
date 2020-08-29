@@ -13,7 +13,7 @@ Functions for downloading compound property and crystal structure data via the A
 ##### process_data.py
 A script to split property CSV files into separate training, validation, and testing data sets.
 
-#### property_to_csv.py
+##### property_to_csv.py
 A script for iterating over each compound, collecting data values by property, and grouping them into CSV files.
 
 ##### valid_targets.csv
